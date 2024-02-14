@@ -23,7 +23,15 @@ interface User {
 	lastName: string;
 	age: number;
 	email?: string
-}
+} 
+
+// type User = {
+// 	firstName: string;
+// 	lastName: string;
+// 	age: number;
+// 	email?: string
+// } 
+
 function isLegal(user: User):boolean{
 	return ((user.age>18)?true:false)
 }
