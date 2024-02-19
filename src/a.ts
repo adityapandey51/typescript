@@ -1,3 +1,13 @@
+import express from "express";
+const app: any=express();
+
+app.get("/",(req:any,res:any)=>{
+	if(!req.query.userId){
+		res.status(ResponseStatus.Error).json({})
+	}
+	res.status(ResponseStatus.Success).json({})
+})
+
 const i:number =100;
 console.log(i);
 
@@ -63,25 +73,17 @@ enum ResponseStatus {
     Error = 500
 }
 
-app.get("/', (req, res) => {
-    if (!req.query.userId) {
-			res.status(ResponseStatus.Error).json({})
-    }
-    // and so on...
-		res.status(ResponseStatus.Success).json({});
-})
-
 //setting default values
-enum Direction {
-    Up = "UP",
-    Down = "Down",
-    Left = "Left",
-    Right = 'Right'
-}
+// enum Direction {
+//     Up = "UP",
+//     Down = "Down",
+//     Left = "Left",
+//     Right = 'Right'
+// }
 
-function doSomething(keyPressed: Direction) {
-	// do something.
-}
+// function doSomething(keyPressed: Direction) {
+// 	// do something.
+// }
 
 doSomething(Direction.Down)
 
