@@ -95,3 +95,29 @@ function returnFirstIndex<T> (inputParam: T[]){
 
 const a=returnFirstIndex<string>(["Aditya","Pandey"]);
 console.log(a);
+
+function sumOfAge(a: User, b: User) {
+	return a.age + b.age;
+  };
+  
+  // Example usage
+  const result = sumOfAge({
+	  firstName: "hello",
+	  lastName:"world",
+	  age:20
+  }, {
+	  firstName: "hi",
+	  lastName:"world",
+	  age:21
+  });
+  console.log(result); 
+
+  
+  
+  // For a profile display, only pick `name` and `email`
+  type UserProfile = Pick<User, 'firstName' | 'email'>;
+  
+  const displayUserProfile = (user: UserProfile) => {
+	console.log(`Name: ${user.firstName}, Email: ${user.email}`);
+  };
+  
